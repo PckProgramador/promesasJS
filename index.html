@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Ejercicio1 -->
+      <div id="ejercicio1">
+        <h2 id="tituloEjercicio1"></h2>
+        <img src="" alt="" id="imagenEjercicio1" />
+        <p id="textoEjercicio1"></p>
+        <label for="url"> Url imagen:(Funciona con urls de internet) </label>
+        <br /><br /><input type="text" name="url" id="urlid" />
+        <p>
+          Si quieres probarlo en local con http://localhost:5173/ + la url de tu
+          imagen en el vite project
+        </p>
+      </div>
+      <!-- Ejercicio2 -->
+      <div id="Ejercicio2">
+        <h2 id="tituloEjercicio2">Ejercicio 2</h2>
+        <form action="#">
+          <label for="numero1">Numero1</label><br />
+          <input type="number" name="numero1" id="numero1" /><br />
+          <label for="numero2">Numero2</label><br />
+          <input type="number" name="numero2" id="numero2" /><br />
+          <label for="operacion">Operacion</label><br />
+          <input type="text" name="operacion" id="operacion" /><br />
+        </form>
+        <p id="textoEjercicio2"></p>
+      </div>
+      <div id="Ejercicio3">
+        <h2>Ejercicio 3</h2>
+        <p>Animación de esta imagen</p>
+
+        <label for="animacion">Duracion en segundos de la animación</label>
+        <input type="number" name="animacion" id="tiempoAnimacion" />
+        <input type="submit" id="botonAnimacion" value="Animar" /><br />
+        <br />
+        <img src="./images/ejercicio3.jpg" alt="" id="imagenAnimacion" />
+        <p id="pEjercicio3"></p>
+      </div>
+
+      <div id="Ejercicio4">
+        <h2>Ejercicio 4</h2>
+        <p id="pej4"></p>
+        <input type="submit" value="Ejercicio4" id="botonEjercicio4" />
+      </div>
+
+      <div id="Ejercicio5">
+        <h2>Ejercicio 5</h2>
+        <form action="#">
+          <h3>Inicio de sesión</h3>
+          <label for="username">Username:</label><br />
+          <input type="text" id="username" /><br />
+          <label for="">Password:</label><br />
+          <input type="text" id="password" /><br />
+          <input type="submit" id="boton5" /><br /><br />
+        </form>
+        <p id="pej5"></p>
+      </div>
+      <div id="map"></div>
+
+      <div id="Ejercicio6">
+        <h3>Ejercicio 6</h3>
+        <label for="ciudad"> Introduce la ciudad que deseas buscar: </label
+        ><br /><br />
+        <input type="text" name="ciudad" id="ciudadInput" />
+        <input type="submit" id="botonEnviar6" />
+        <p id="pej6"></p>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
