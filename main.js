@@ -364,10 +364,9 @@ async function getWeather(ciudad) {
     pej6.textContent = "Error, ciudad no encontrada";
     return false;
   }
-  console.log(url);
   fetch(url)
     .then((response) => response.json())
-    .then((data) => renderCard(data))
+    .then((data) => renderCard(data, ciudad))
     .catch((error) => console.log(error));
 }
 function buscarCiudad(ciudad) {
@@ -408,7 +407,7 @@ function getIcono2(arrayViento) {
     return "Recomendado no salir de casa, vientos fuertes🛑🌪";
   }
 }
-function renderCard(objeto) {
+function renderCard(objeto, ciudad) {
   //rellenamos la imagen
   imgCard.height = 100;
   imgCard.width = 100;
@@ -416,7 +415,8 @@ function renderCard(objeto) {
   imgCard.src = getIcono(arrayLluvia);
 
   h3card.textContent =
-    "Granada,España Latitud:" +
+    ciudad +
+    ",España Latitud:" +
     objeto.latitude +
     " Longitud:" +
     objeto.longitude;
